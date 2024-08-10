@@ -1,0 +1,935 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Final Project: Data Science Portfolio &#8212; Digital Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'assignment_08';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Digital Portfolio - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Digital Portfolio - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Digital Portfolio
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Information</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="about_me.html">About Me</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cv.html">Curriculum Vitae</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Example of Analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="analysis_example.html">Titanic Dataset: Exploratory Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citations.html">Acknowledgments</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fassignment_08.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/assignment_08.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Final Project: Data Science Portfolio</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-instructions">Submission instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-new-jupyter-book">1. Initialize New Jupyter Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-configuration-file-called-config-yml">2. Modify configuration file called <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-table-of-contents-file-called-toc-yml">3. Modify table of contents file called <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-about-me-section">4. Modify About Me Section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-curriculum-vitae-section">5. Modify Curriculum Vitae Section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titanic-dataset-exploratory-data-analysis">6. Titanic Dataset: Exploratory Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-citations">7. Edit Citations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-intro-md-file">8. Edit <code class="docutils literal notranslate"><span class="pre">intro.md</span></code> file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-github-repo-and-publish-your-book">9. Create a Github Repo and Publish your book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#share-you-link">Share you Link</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize Otter</span>
+<span class="kn">import</span> <span class="nn">otter</span>
+<span class="n">grader</span> <span class="o">=</span> <span class="n">otter</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="s2">&quot;assignment_08.ipynb&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="final-project-data-science-portfolio">
+<h1>Final Project: Data Science Portfolio<a class="headerlink" href="#final-project-data-science-portfolio" title="Link to this heading">#</a></h1>
+<p>As part of this assignment, you will be helping a data scientist named Alex Do create her digital data science portfolio. Alex wants to present her skills, work, and interests in a professional manner using a digital website rather then a pile of various documents. To assist her in achieving this objective, you will use JupyterLab Books, which you have learnt about in this module. By the end of this task, you should have produced a portfolio that effectively captures Alex’s knowledge and enthusiasm for data science while also being aesthetically pleasing and educational. In addition to giving you the chance to put the knowledge you gained in this module into practice, this assignment will give you the valuable opportunity to work on a real-life project and help someone advance their career.</p>
+<p>In the downloaded folder you can find repo called <code class="docutils literal notranslate"><span class="pre">AlexDo-files</span></code>. Inside the repo you can find the following files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cover</span> <span class="pre">letter.docx</span></code> - Alex’s cover letter for the potential employers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CV.docx</span></code> - Alex’s curriculum vitae showcasing her skills and work history</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profile-picture.png</span></code> - photo that she would like to use in her digital portfolio</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code> - example of data science project</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data/titanic_train.csv</span></code> - a dataset that is needed to run <code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code> file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">titanic.jpg</span></code> - image that Alex used in her <code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code> file to showcase her work</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">citations.md</span></code> - text file with acknowledgment and citations that were used to create this assignment</p></li>
+</ul>
+<p>Follow the instructions below that will explain how the data should be presented and showcased in this portfolio</p>
+<!-- BEGIN QUESTION -->
+<div class="alert alert-info">
+<section id="submission-instructions">
+<h2>Submission instructions<a class="headerlink" href="#submission-instructions" title="Link to this heading">#</a></h2>
+<p>You receive marks for submitting your lab correctly, please follow these instructions:</p>
+<ul>
+  <!-- <li>Make at least three commits.</li>-->
+  <li>Export to HTML via <code>File -> Save and export notebook as... -> HTML</code> and upload the HTML file to Canvas.</li>
+    <ul>
+      <li>Before submitting, make sure you restart the kernel and rerun all cells.</li>
+    </ul>
+  <li>Don't change any variable names that are given to you, don't move cells around, and don't include any code to install packages in the notebook.</li>
+  </li>
+</ul>
+</div>
+<p><em>Points:</em> 1</p>
+<!-- END QUESTION -->
+</section>
+<hr class="docutils" />
+<section id="initialize-new-jupyter-book">
+<h2>1. Initialize New Jupyter Book<a class="headerlink" href="#initialize-new-jupyter-book" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Create a new jupyter-book in a folder called <code class="docutils literal notranslate"><span class="pre">digital-portfolio</span></code>.</p>
+ <details><summary><b>Hint:</b></summary>
+ Use the <code>jupyter-book create</code> command
+<p>Also, feel free to create a copy of this repo: so you can access each demo file in case you want to see how the certain feature was created in demo book.</p>
+ </details>
+</li>
+<li><p>Build your demo book to make sure everything is working properly</p>
+<details><summary><b>Hint:</b></summary>
+Consider using <code>jupyter-book build </code> command
+For this and future steps: be caerful with path of your commands: for instance the path will look like <code>digital-portfolio/</code> if you are located in a parent directory, and path will look like <code>./</code> if you run commands inside the <code>digital-portfolio</code>. In case you use the wrong path, you will see the error:  `Path 'digital-portfolio' does not exist.` or `Couldn't find a Table of Contents file.`
+</details>
+<p>If everything is done properly, you should see a message shown below and also <code class="docutils literal notranslate"><span class="pre">_build</span></code> appearing in your <code class="docutils literal notranslate"><span class="pre">digital-portfolio</span></code> folder:</p>
+<img src="images/pic01.png" width=80% >
+<p>If you copy paste the last line into the search menu of your browser, you should be able to see your “web-page” view of your demo jupyter book.
+Spend some time, exploring the contents of the <code class="docutils literal notranslate"><span class="pre">digital-portfolio</span></code>, try to link which parts of the code inside each file corresponds to which page/feature in your generated Book.</p>
+</li>
+<li><p>Find the <code class="docutils literal notranslate"><span class="pre">AlexDo-files</span></code> repo  in the same folder as this notebook. You will use the contents of this folder in a future steps</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="modify-configuration-file-called-config-yml">
+<h2>2. Modify configuration file called <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code><a class="headerlink" href="#modify-configuration-file-called-config-yml" title="Link to this heading">#</a></h2>
+<p>Change the following information inside <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<ul class="simple">
+<li><p>Set title of the book to <code class="docutils literal notranslate"><span class="pre">Digital</span> <span class="pre">Portfolio</span></code></p></li>
+<li><p>Put author name as <code class="docutils literal notranslate"><span class="pre">Alex</span> <span class="pre">Do</span></code></p></li>
+<li><p>delete <code class="docutils literal notranslate"><span class="pre">logo.png</span></code> file and make Alex’s profile picture (<code class="docutils literal notranslate"><span class="pre">profile-picture.png</span></code>) as a logo of your book.</p></li>
+</ul>
+<p>Once you done, rebuild your book and make sure you see the applied changes.</p>
+<details><summary><b>Hint:</b></summary>
+Rebuilding the book means two steps:
+<ol class="arabic simple">
+<li><p>To clean cached book files using <code>jupyter-book clean</code> command</p></li>
+<li><p>Building a new book with <code>jupyter-book build</code> command</p></li>
+</ol>
+</details>
+<p>If you refresh the webpage with your digital book (from step 1.2), you should see all the changes</p>
+</section>
+<hr class="docutils" />
+<section id="modify-table-of-contents-file-called-toc-yml">
+<h2>3. Modify table of contents file called <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code><a class="headerlink" href="#modify-table-of-contents-file-called-toc-yml" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Delete the following files from your <code class="docutils literal notranslate"><span class="pre">digital-portfolio</span></code> folder:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">markdown.md</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">markdown-notebooks.md</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">notebooks.ipynb</span></code></p></li>
+</ul>
+</li>
+<li><p>Copy the following files from <code class="docutils literal notranslate"><span class="pre">AlexDo-files</span></code> folder into <code class="docutils literal notranslate"><span class="pre">digital-portfolio</span></code> folder:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">citations.md</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data/</span></code> folder</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">img/</span></code> folder</p></li>
+</ul>
+</li>
+<li><p>Create the following empty <code class="docutils literal notranslate"><span class="pre">.md</span></code>files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">about_me.md</span></code> and add a level 1 header using markdown syntax</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv.md</span></code> and add a level 1 header using markdown syntax</p></li>
+</ul>
+</li>
+<li><p>Modify <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file to define the structure of the book using parts to organize the chapters:</p>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/structure/toc.html#use-parts-to-organize-chapters">https://jupyterbook.org/en/stable/structure/toc.html#use-parts-to-organize-chapters</a></p></li>
+</ul>
+ </details>
+<p>Your file organization should look like this:</p>
+<ul class="simple">
+<li><p>Table of contents should have two parts.</p>
+<ul>
+<li><p>First part caption is <code class="docutils literal notranslate"><span class="pre">Information</span></code></p></li>
+<li><p>Second part caption is <code class="docutils literal notranslate"><span class="pre">Example</span> <span class="pre">of</span> <span class="pre">Analysis</span></code></p></li>
+</ul>
+</li>
+<li><p>In the first part you have 2 chapters with the following files:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">about_me.md</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cv.md</span></code></p></li>
+</ul>
+</li>
+<li><p>In the second part you have 2 chapters with the following files:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">citations.md</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Once you done, rebuild your book. You can ignore the warnings regarding <code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code> as long as at the end you see the image similar to the one shown in step 1.2</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="modify-about-me-section">
+<h2>4. Modify About Me Section<a class="headerlink" href="#modify-about-me-section" title="Link to this heading">#</a></h2>
+<p>Open Alex’s cover letter for the potential employers (<code class="docutils literal notranslate"><span class="pre">cover</span> <span class="pre">letter.docx</span></code> file). Save the contents inside the <code class="docutils literal notranslate"><span class="pre">about_me.md</span></code> file you have created in previous step (step 3.3)</p>
+<ol class="arabic">
+<li><p>Within a document:</p>
+<ul class="simple">
+<li><p>rename the header on line 1 to <code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">Me</span></code></p></li>
+</ul>
+</li>
+<li><p>Using <a class="reference external" href="https://jupyterbook.org/en/stable/content/myst.html#directives">Directives</a> customize the look, feel, and behaviour of your <code class="docutils literal notranslate"><span class="pre">about_me.md</span></code> file:</p>
+<ul class="simple">
+<li><p>lines 19-21: Make this paragraph a warning</p></li>
+<li><p>lines 29-32: Make this paragraph a note</p></li>
+<li><p>lines 34-35: Make this quote appear in a margin:</p>
+<ul>
+<li><p>Make a custom header “Quote by Tim Berners-Lee”,</p></li>
+<li><p>format the body of the quote formal using proper markdown syntax for blockquotes</p></li>
+</ul>
+</li>
+</ul>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/myst.html#nesting-content-blocks-in-markdown">https://jupyterbook.org/en/stable/content/myst.html#nesting-content-blocks-in-markdown</a></p></li>
+<li><p><a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html">https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/myst.html#nesting-content-blocks-in-markdown">https://jupyterbook.org/en/stable/content/myst.html#nesting-content-blocks-in-markdown</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/myst.html">https://jupyterbook.org/en/stable/content/myst.html</a></p></li>
+<li><p><a class="reference external" href="https://www.markdownguide.org/cheat-sheet">https://www.markdownguide.org/cheat-sheet</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>Once you done, rebuild your book. You can ignore the warnings regarding <code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code> as long as at the end you see the image similar to the one shown in step 1.2</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="modify-curriculum-vitae-section">
+<h2>5. Modify Curriculum Vitae Section<a class="headerlink" href="#modify-curriculum-vitae-section" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Open Alex’s corriculum vitae document (<code class="docutils literal notranslate"><span class="pre">CV.docx</span></code> file). Save the contents inside the <code class="docutils literal notranslate"><span class="pre">cv.md</span></code> file you have created in previous step (step 3.3)</p>
+<ul class="simple">
+<li><p>make sure lines are formatted as proper headers using markdown syntax</p></li>
+<li><p>make sure all the unnumbered listed are formatted properly using markdown syntax</p></li>
+<li><p>make sure text that is bolded, underlined or italicized are formatted accordingly.Note: underline is not part of mardown syntax, so use html syntax to make text underlined: <code class="docutils literal notranslate"><span class="pre">&lt;u&gt;text&lt;/u&gt;</span></code></p></li>
+</ul>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.markdownguide.org/basic-syntax">https://www.markdownguide.org/basic-syntax</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>Create section labels for <code class="docutils literal notranslate"><span class="pre">Education</span></code>, <code class="docutils literal notranslate"><span class="pre">Skills</span></code> and <code class="docutils literal notranslate"><span class="pre">Professional</span> <span class="pre">Experience</span></code> sections</p>
+<ul class="simple">
+<li><p>Use labels you created to cross-reference the section mentioned in summary paragraph (lines 8-17)</p></li>
+</ul>
+</li>
+<li><p>Change last line of summary paragraph “Example of my work can be found in analysis_example.ipynb” to <code class="docutils literal notranslate"><span class="pre">Example</span> <span class="pre">of</span> <span class="pre">my</span> <span class="pre">work</span> <span class="pre">can</span> <span class="pre">be</span> <span class="pre">found</span> <span class="pre">here</span></code>. Make <code class="docutils literal notranslate"><span class="pre">here</span></code> a link to <code class="docutils literal notranslate"><span class="pre">analysis_example.ipynb</span></code> file</p>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/references.html#content-references-labels">https://jupyterbook.org/en/stable/content/references.html#content-references-labels</a></p></li>
+<li><p>Module 8 Video Part 3 slide 2: <a class="reference external" href="https://toolbox-learn.mds.ubc.ca/en/module8">https://toolbox-learn.mds.ubc.ca/en/module8</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>Convert the items in Professional Experience to dropdowns. Use the {dropdown} directive to create a clickable dropdown with a title. title of each dropdown should be a bolded text from lines 35, 47 and 47 and the content of the dropdowns will be a list of responsibilities for each of the listed data science positions</p>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/components.html#the-dropdown-directive">https://jupyterbook.org/en/stable/content/components.html#the-dropdown-directive</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>In Certifications section (line 68) you can see that the list is arranged into 2 columns. Recreate this structure using grids made up of cards, by using the {grid-item-card} directive.
+feel free to change of order of list items if you want each column to have equal length</p>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/components.html#create-grids-of-cards">https://jupyterbook.org/en/stable/content/components.html#create-grids-of-cards</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>Once you done, rebuild your book. You can ignore the warnings regarding analysis_example.ipynb as long as at the end you see the image similar to the one shown in step 1.2</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="titanic-dataset-exploratory-data-analysis">
+<h2>6. Titanic Dataset: Exploratory Data Analysis<a class="headerlink" href="#titanic-dataset-exploratory-data-analysis" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Alex wants to add an image at the beginning of her <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file instead of line <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">add</span> <span class="pre">image</span> <span class="pre">here</span></code>. Use MyST Markdown to include <code class="docutils literal notranslate"><span class="pre">titanic.jpg</span></code> figure (from <code class="docutils literal notranslate"><span class="pre">img</span></code> folder) into your <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file.  Note, you will need to build the book to see whether you successfully added the image since Jupyter notebook will not show it.</p></li>
+</ol>
+<ul>
+<li><p>Set the height of the image to be 500px.</p></li>
+<li><p>Make a  line <code class="docutils literal notranslate"><span class="pre">Titanic</span> <span class="pre">Image</span> <span class="pre">downloaded</span> <span class="pre">from</span> <span class="pre">wikimedia</span></code> as a figure caption. Make sure that the link to wikimedia still works after you did all the changes</p></li>
+<li><p>In the sentence <code class="docutils literal notranslate"><span class="pre">This</span> <span class="pre">is</span> <span class="pre">an</span> <span class="pre">EDA</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">famous</span> <span class="pre">Titanic</span> <span class="pre">(shown</span> <span class="pre">in</span> <span class="pre">Fig.1)</span> <span class="pre">dataset</span> <span class="pre">from</span> <span class="pre">Kaggle.</span></code> Make <code class="docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">1</span></code> a crossreference to the figure you have added</p>
+  <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/figures.html#figures">https://jupyterbook.org/en/stable/content/figures.html#figures</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/references.html#reference-figures">https://jupyterbook.org/en/stable/content/references.html#reference-figures</a></p></li>
+</ul>
+  </details>
+</li>
+</ul>
+<ol class="arabic" start="2">
+<li><p>Using JupyterLab cell metadata,</p>
+<ul class="simple">
+<li><p>hide all code chunks that output a chart.</p></li>
+<li><p>hide the cell that imports the libraries</p></li>
+</ul>
+<details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/metadata.html#add-metadata-to-notebooks">https://jupyterbook.org/en/stable/content/metadata.html#add-metadata-to-notebooks</a></p></li>
+<li><p>Video Module 8 Part 5 slide 7 : <a class="reference external" href="https://toolbox-learn.mds.ubc.ca/en/module8">https://toolbox-learn.mds.ubc.ca/en/module8</a></p></li>
+<li><p><a class="reference external" href="https://sphinx-book-theme.readthedocs.io/en/stable/reference/notebooks.html">https://sphinx-book-theme.readthedocs.io/en/stable/reference/notebooks.html</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/interactive/hiding.html">https://jupyterbook.org/en/stable/interactive/hiding.html</a></p></li>
+</ul>
+</details>
+</li>
+</ol>
+<div class="alert alert-danger">
+<p>NOTE: after you finish working with jupyter lab and you want to re-built the book: you need to delete the hidden folders <code>.ipynb_checkpoints</code>, <code>.jupyter</code>,<code>.virtual_documents</code>, otherwise you get an error message <code>nbformat.reader.NotJSONError: Notebook does not appear to be JSON:</code></p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Once you done, rebuild your book. You should see <strong>no warnings now</strong></p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="edit-citations">
+<h2>7. Edit Citations<a class="headerlink" href="#edit-citations" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Add the following files into <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>  ( you can remove any other references- we don’t use them in our project)</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@misc</span><span class="p">{</span><span class="n">chatgpt</span><span class="p">,</span>
+<span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">ChatGPT</span><span class="p">},</span>
+<span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">ChatGPT</span> <span class="n">version</span> <span class="mf">3.5</span><span class="p">},</span>
+<span class="n">howpublished</span> <span class="o">=</span> <span class="p">{</span>\<span class="n">url</span><span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">chat</span><span class="o">.</span><span class="n">openai</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="p">}},</span>
+<span class="n">month</span> <span class="o">=</span> <span class="p">{},</span>
+<span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2022</span><span class="p">},</span>
+<span class="n">note</span> <span class="o">=</span> <span class="p">{(</span><span class="n">Accessed</span> <span class="n">on</span> <span class="mi">2023</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">27</span><span class="p">)}</span>
+<span class="p">}</span>
+
+
+<span class="nd">@misc</span><span class="p">{</span><span class="n">logoface</span><span class="p">,</span>
+<span class="n">author</span> <span class="o">=</span> <span class="p">{</span><span class="n">thispersondoesnotexist</span><span class="p">},</span>
+<span class="n">title</span> <span class="o">=</span> <span class="p">{</span><span class="n">This</span> <span class="n">person</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span><span class="p">},</span>
+<span class="n">howpublished</span> <span class="o">=</span> <span class="p">{</span>\<span class="n">url</span><span class="p">{</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">thispersondoesnotexist</span><span class="o">.</span><span class="n">xyz</span><span class="o">/</span><span class="p">}},</span>
+<span class="n">month</span> <span class="o">=</span> <span class="p">{},</span>
+<span class="n">year</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2022</span><span class="p">},</span>
+<span class="n">note</span> <span class="o">=</span> <span class="p">{(</span><span class="n">Accessed</span> <span class="n">on</span> <span class="mi">2023</span><span class="o">/</span><span class="mi">04</span><span class="o">/</span><span class="mi">27</span><span class="p">)}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ol class="arabic" start="2">
+<li><p>Let’s now edit the <code class="docutils literal notranslate"><span class="pre">citations.md</span></code> file.</p>
+<ul class="simple">
+<li><p>Under section References add bibliography</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">ChatGPT</span></code> reference at the end of the <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">image</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">data</span> <span class="pre">scientist</span> <span class="pre">was</span> <span class="pre">generated</span> <span class="pre">...</span></code> sentence (using <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> syntax)</p></li>
+<li><p>Add the <code class="docutils literal notranslate"><span class="pre">thispersondoesnotexist</span></code> reference at the end of the <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">contents</span> <span class="pre">of</span> <span class="pre">CV</span> <span class="pre">and</span> <span class="pre">Cover</span> <span class="pre">letter</span> <span class="pre">...</span></code> sentence (using <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> syntax)</p></li>
+</ul>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/citations.html">https://jupyterbook.org/en/stable/content/citations.html</a></p></li>
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/tutorials/references.html#tutorials-references">https://jupyterbook.org/en/stable/tutorials/references.html#tutorials-references</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>Once you done, rebuild your book.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="edit-intro-md-file">
+<h2>8. Edit <code class="docutils literal notranslate"><span class="pre">intro.md</span></code> file<a class="headerlink" href="#edit-intro-md-file" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Now let’s modify the last <code class="docutils literal notranslate"><span class="pre">intro.md</span></code> file:</p>
+<ul class="simple">
+<li><p>Rename the level 1 header to <code class="docutils literal notranslate"><span class="pre">Digital</span> <span class="pre">Portfolio</span></code></p></li>
+<li><p>Leave the sentence <code class="docutils literal notranslate"><span class="pre">Check</span> <span class="pre">out</span> <span class="pre">the</span> <span class="pre">content</span> <span class="pre">pages</span> <span class="pre">bundled</span> <span class="pre">with</span> <span class="pre">this</span> <span class="pre">sample</span> <span class="pre">book</span> <span class="pre">to</span> <span class="pre">see</span> <span class="pre">more.</span></code> Remove the rest of the text above except the header.</p></li>
+<li><p>Add a table of contents for the sub-sections of a page within the page content (in-line with the content on the page), using the <code class="docutils literal notranslate"><span class="pre">{tableofcontents}</span></code> directive. If you are not sure what it means, check the Helpful Links section.</p></li>
+</ul>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/structure/configure.html?highlight=tableofcontents#add-a-table-of-contents-to-a-pages-content">https://jupyterbook.org/en/stable/structure/configure.html?highlight=tableofcontents#add-a-table-of-contents-to-a-pages-content</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>At the end of the page, add two tabs:</p></li>
+</ol>
+<ul>
+<li><p>tab 1 called <code class="docutils literal notranslate"><span class="pre">Things</span> <span class="pre">I</span> <span class="pre">learned</span></code>. Then add a list of 2-3 things that you found useful when making this assignment</p></li>
+<li><p>tab 2 called <code class="docutils literal notranslate"><span class="pre">Things</span> <span class="pre">I</span> <span class="pre">found</span> <span class="pre">difficult</span></code>. Then add a list of 2-3 things that you struggle with or would like to practice more</p>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/content/components.html#tab-content">https://jupyterbook.org/en/stable/content/components.html#tab-content</a></p></li>
+</ul>
+ </details>
+</li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Once you done, rebuild your book.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="create-a-github-repo-and-publish-your-book">
+<h2>9. Create a Github Repo and Publish your book<a class="headerlink" href="#create-a-github-repo-and-publish-your-book" title="Link to this heading">#</a></h2>
+<p>Once you’ve built the HTML for your book, and you happy with all the changes (make sure that all changes you made are working properly- or renders correctly).</p>
+<ol class="arabic">
+<li><p>Login on GitHub, and create a new repository called <code class="docutils literal notranslate"><span class="pre">digital-portfolio</span></code></p>
+<ul class="simple">
+<li><p>Make your repository <strong>public</strong></p></li>
+<li><p><strong>Do not initialize</strong> it with a README file.</p></li>
+</ul>
+</li>
+<li><p>Clone the (currently empty) online repository to a location on your local computer.</p></li>
+<li><p>Copy all of your book’s files and folders into this newly cloned repository.</p></li>
+<li><p>Add _build/ to your <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> to avoid pushing build artifacts to your main branch. We are going to push these files and folders to another branch later to create the website.</p></li>
+<li><p>Sync your local and remote (i.e., online) repositories.</p>
+ <details><summary><b>Hint:</b></summary>
+<p>Navigate to your clonned repo, commit and push the changes</p>
+ </details>
+</li>
+<li><p>Using the <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> package, publish your book to GitHub pages using <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">_build/html</span></code> command. But first, make sure you have installed the <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> package on your computer</p>
+ <details><summary><b>Helpful Links:</b></summary>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org/en/stable/publish/gh-pages.html#option-2-automatically-push-your-build-files-with-ghp-import">https://jupyterbook.org/en/stable/publish/gh-pages.html#option-2-automatically-push-your-build-files-with-ghp-import</a></p></li>
+</ul>
+ </details>
+</li>
+<li><p>The settings for GitHub Pages must be configured to reflect the method used to build the docs.  Go to your remote repo, click Settings -&gt; Pages. Set Source to Deploy from a branch and set Branch to <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>. The build location should be <code class="docutils literal notranslate"><span class="pre">/(root)</span></code>.</p>
+ <details><summary><b>Hints</b></summary>
+ <img src="images/pic02.png" width=90% >
+<p><a class="reference external" href="https://jupyterbook.org/en/stable/publish/gh-pages.html#github-pages-configuration">https://jupyterbook.org/en/stable/publish/gh-pages.html#github-pages-configuration</a></p>
+ </details>
+</li>
+<li><p>Wait until you see the box appear  in the image above: indicating that the Book Have been published</p></li>
+</ol>
+<!-- BEGIN QUESTION -->
+<div class="alert alert-info">
+<section id="share-you-link">
+<h3>Share you Link<a class="headerlink" href="#share-you-link" title="Link to this heading">#</a></h3>
+<p>Once you book is published, send us a URL link to your <code class="docutils literal notranslate"><span class="pre">jupyterlab_practice</span></code> GitHub Pages. GitHub Pages will host your book at a URL like <code class="docutils literal notranslate"><span class="pre">https://USERNAME.github.io/portfolio/intro.html</span></code></p>
+</div>
+<p><em>Points:</em> 20</p>
+<p><em>Type your answer here, replacing this text.</em></p>
+<!-- END QUESTION -->
+<div class="alert alert-danger" style="color:black">
+<p><strong>Restart and run all before submitting</strong></p>
+<p>Before submitting,
+don’t forget to run all cells in your notebook
+to make sure there are no errors
+and so that the TAs can see the output of all the cells properly.
+You can do this by clicking the ▶▶ button
+or going to <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">-&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells...</span></code> in the menu.
+This is not only important for this course,
+but a good habit you should get into before ever committing a notebook to GitHub,
+so that your collaborators can run it from top to bottom
+without issues.</p>
+</div><hr class="docutils" />
+<p>Congratulations, you have completed the last assignment of DSToolbox! 😁🎉</p>
+<hr class="docutils" />
+<p>To double-check your work, the cell below will rerun all of the autograder tests.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check_all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "conda-base-py"
+        },
+        kernelOptions: {
+            name: "conda-base-py",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'conda-base-py'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission-instructions">Submission instructions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-new-jupyter-book">1. Initialize New Jupyter Book</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-configuration-file-called-config-yml">2. Modify configuration file called <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-table-of-contents-file-called-toc-yml">3. Modify table of contents file called <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-about-me-section">4. Modify About Me Section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modify-curriculum-vitae-section">5. Modify Curriculum Vitae Section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#titanic-dataset-exploratory-data-analysis">6. Titanic Dataset: Exploratory Data Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-citations">7. Edit Citations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edit-intro-md-file">8. Edit <code class="docutils literal notranslate"><span class="pre">intro.md</span></code> file</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-github-repo-and-publish-your-book">9. Create a Github Repo and Publish your book</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#share-you-link">Share you Link</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alex Do
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
